@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DaVinci User Poll</title>
+</head>
+<body>
+    {{ poll.name }}
+    <br>1 - {{ poll.answer_1 }}
+    <br>2 - {{ poll.answer_2 }}
+    <br>3 - {{ poll.answer_3 }}
+    <br>4 - {{ poll.answer_4 }}
+
+    <br>
+    <br>
+    {{ msg }}
+    <br>
+
+    <form method="post">
+        {{ form }}
+        <input type="submit" value="Save">
+        {% csrf_token %}
+    </form>
+
+</body>
+</html>
